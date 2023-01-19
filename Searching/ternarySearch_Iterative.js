@@ -7,7 +7,7 @@ function ternarySearch(arr, key)
 	while(low < high)
 	{
 		let mid1 = low + Math.floor((high - low)/3);
-		let mid2 = high + Math.floor((high - low)/3);
+		let mid2 = high - Math.floor((high - low)/3);
 
 		if(arr[mid1] == key)
 			return mid1;
@@ -29,7 +29,7 @@ function ternarySearch(arr, key)
 };
 
 let arr = [10,20,30,40,50,60,70]
-let x = 30;
+let x = 40;
 
 let res = ternarySearch(arr, x);
 (res == -1) ? console.log("Element not found") :
