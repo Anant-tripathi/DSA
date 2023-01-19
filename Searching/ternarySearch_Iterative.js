@@ -7,7 +7,7 @@ function ternarySearch(arr, key)
 	while(low < high)
 	{
 		let mid1 = low + Math.floor((high - low)/3);
-		let mid2 = high - Math.floor((high - low)/3);
+		let mid2 = high + Math.floor((high - low)/3);
 
 		if(arr[mid1] == key)
 			return mid1;
